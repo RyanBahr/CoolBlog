@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Blog Post Index</h1>
+  {% if index %}
+  <ul>
+    {% for post in index %}
+      <li>
+        <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no posts in this blog.</p>
+  {% endif %}
+{% endblock %}
