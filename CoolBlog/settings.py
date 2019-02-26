@@ -30,7 +30,7 @@ if 'DJANGO_DEBUG_FALSE' in os.environ:
 else:
     DEBUG = True
     SECRET_KEY = 'abcdefghijklmnopqrstuvwxyz'
-    ALLOWED_HOSTS = []
+    ALLOWED_HOSTS = [ryan.letaluss.xyz]
 
 ALLOWED_HOSTS = []
 
@@ -90,6 +90,7 @@ DATABASES = {
     }
 }
 
+STATIC_ROOT = os.path.join(BASE_DIR, '../static')
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
