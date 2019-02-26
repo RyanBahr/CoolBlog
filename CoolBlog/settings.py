@@ -30,9 +30,7 @@ if 'DJANGO_DEBUG_FALSE' in os.environ:
 else:
     DEBUG = True
     SECRET_KEY = 'abcdefghijklmnopqrstuvwxyz'
-    ALLOWED_HOSTS = [ryan.letaluss.xyz]
-
-ALLOWED_HOSTS = []
+    ALLOWED_HOSTS = []
 
 
 # Application definition
