@@ -15,7 +15,7 @@ class post(models.Model):
 
     def __str__(self):
         """String for representing the Model object."""
-        return f'title'
+        return title
 
 # class Author(models.Model):
 #     """Model representing an author/user of this blog."""
