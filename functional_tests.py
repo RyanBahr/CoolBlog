@@ -13,10 +13,8 @@ class NewVisitorTest(unittest.TestCase):
     def tearDown(self):
         self.browser.quit()
 
-    def test_can_start_a_post(self):
-        self.browser.get('http://localhost:8000')
-
-
+    # def test_can_start_a_post(self):
+    #     self.browser.get('http://localhost:8000')
 
     # I am on the website. I notice the name "Cool Blog" in the title of the siteself.
         self.assertIn('Cool Blog', header_text)
