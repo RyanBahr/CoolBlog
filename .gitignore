@@ -16,3 +16,4 @@ Break
 git commit -am
 echo __pycache__
 *.pyc
+.env
