@@ -4,7 +4,7 @@
   <h1>Title: {{ post.title }}</h1>
 
   <p><strong>Published:</strong> {{ post.published_on }}</p> <!-- author detail link not yet defined -->
-  <p>{{ post.content }}</p>
+  <p>{{ post.formatted_markdown|safe }}</p>
 
   </div>
 {% endblock %}

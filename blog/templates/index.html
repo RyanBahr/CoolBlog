@@ -6,7 +6,7 @@
   <ul>
     {% for post in index %}
       <li>
-        <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+        <a href="{{ post.get_absolute_url }}">{{ post.title }} -- {{ post.published_on }}</a>
       </li>
     {% endfor %}
   </ul>

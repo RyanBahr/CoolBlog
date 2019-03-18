@@ -13,8 +13,8 @@ class HomePageTest(TestCase):
         request = HttpRequest()
         response = home(request)
         html = response.content.decode('utf8')
-        self.assertTrue(html.startswith('<html>'))
-        self.assertIn('<title>Cool Blog</title>', html)
+        self.assertTrue(html.startswith('<!DOCTYPE html>'))
+        self.assertIn('<title>The Most Underground Page on the Internet</title>', html)
         self.assertTrue(html.endswith('</html>'))
 
 
