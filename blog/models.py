@@ -22,6 +22,18 @@ class post(models.Model):
         """String for representing the Model object."""
         return f'title'
 
+# class comment(models.Model):
+#     post = models.ForeignKey('blog.post', on_delete=models.CASCADE, related_name='comments')
+#     author = models.CharField(max_length=200)
+#     text = MarkdownxField()
+#
+#     def approve(self):
+#         self.approved_comment = True
+#         self.save()
+#
+#     def __str__(self):
+#         return self.text
+
 # class Author(models.Model):
 #     """Model representing an author/user of this blog."""
 #     username = models.CharField(max_length=100)

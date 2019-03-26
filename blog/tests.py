@@ -18,5 +18,4 @@ class HomePageTest(TestCase):
         self.assertTrue(html.endswith('</html>'))
 
 
-
 # Create your tests here.
