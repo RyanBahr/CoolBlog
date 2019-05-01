@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h3>{{ pdf.title }}</h3>
+
+<p>Look at me! I'm invisible!</p>
+<iframe src="{{ pdf.embed}}" width="640" height="480"></iframe>
+
+{% endblock %}
+
+
+<!-- <iframe src="https://drive.google.com/file/d/17nLLHAA-Hz3PonYgsxwzsVvkg-B916-I/preview" width="640" height="480"></iframe> -->

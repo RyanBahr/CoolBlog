@@ -5,8 +5,8 @@ from fabric.api import cd, env, local, run, prefix
 
 
 # env.hosts = ['elspeth@ubuntu-s-lvcpu-1gb-sfo2-01']
-# env.passwords = {'elspeth@ubuntu-s-lvcpu-1gb-sfo2-01':'shadow'}
-# env.key_filename = "C:/Users/Ryan/.ssh/id_rsa.ppk"
+env.passwords = {'elspeth@ubuntu-s-lvcpu-1gb-sfo2-01':'shadow'}
+env.key_filename = "C:/Users/Ryan/.ssh/id_rsa.ppk"
 env.user = 'elspeth'
 env.host = 'ryan.letaluss.xyz'
 
@@ -38,7 +38,7 @@ def _get_latest_source():
         run(f'git clone {REPO_URL} ./source')
     current_commit = local("git log -n 1 --format=%H", capture=True)
     with prefix('cd ./source'):
-        run(f'git reset --hard {current_commit}')
+        run(f'sudo git reset --hard {current_commit}')
 
 
 def _update_virtualenv():

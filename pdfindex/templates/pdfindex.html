@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Ryan's sample writings</h1>
+  <p> ROCK AND ROLL </p>
+  <p> This page is dedicated to documenting Ryan's writings. This includes technical writing, literary essays, and other self-contained literary works </p>
+  {% if pdfindex %}
+  <ul>
+    {% for pdf in pdfindex %}
+      <li>
+        <a href="{{ pdf.get_absolute_url }}">{{ pdf.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>Ryan hasn't added any samples of his writing (yet!)</p>
+  {% endif %}
+{% endblock %}
