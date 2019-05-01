@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'CoolBlog',
     'blog',
     'markdownx',
+    'pdfindex',
 ]
 
 MIDDLEWARE = [

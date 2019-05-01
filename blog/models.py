@@ -22,6 +22,15 @@ class post(models.Model):
         """String for representing the Model object."""
         return f'title'
 
+# class pdf(models.Model):
+#     title = models.CharField(max_length=64)
+#     embed = models.CharField(max_length=256)
+#
+#     def get_absolute_url(self):
+#         """Returns the url to access a particular post instance."""
+#         return reverse('pdf', args=[str(self.id)])
+
+
 # class comment(models.Model):
 #     post = models.ForeignKey('blog.post', on_delete=models.CASCADE, related_name='comments')
 #     author = models.CharField(max_length=200)

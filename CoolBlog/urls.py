@@ -16,15 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from blog import views
+# from pdfindex import views as pdf_views
 from django.contrib.auth.views import LoginView, LogoutView
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('sources/', views.sources, name='sources'),
     path('blog/', include('blog.urls')),
+    path('pdfindex/', include('pdfindex.urls')),
     path('admin/', admin.site.urls),
+    path('sources/', views.sources, name='sources'),
     path('markdownx/', include('markdownx.urls')),
     path('bio/', views.bio, name='bio'),
     path('accounts/', include('django.contrib.auth.urls')), # new
-
 ]

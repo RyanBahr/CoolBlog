@@ -22,6 +22,7 @@ def blogpost(request):
 def sources(request):
     return render(request, 'sources.html')
 
+
 class index(generic.ListView):
     context_object_name = 'index'
     model = post
@@ -31,6 +32,7 @@ class blogpost(generic.DetailView):
     model = post
     template_name = 'post_detail.html'
     paginate_by = 10
+
 
 # def add_comment_to_post(request, pk):
 #     commentedpost = get_object_or_404(post, pk=pk)
