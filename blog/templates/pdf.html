@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h3>{{ pdf.title }}</h3>
+<h3>{{ pdf.title }}</h3>
+
+<p> {{ pdf.description }} </p>
 
 <!-- <iframe src="{{ pdf.embed }}" width="640" height="480"></iframe> -->
 <iframe src= {{ pdf.embed_url }} width="640" height="480"></iframe>

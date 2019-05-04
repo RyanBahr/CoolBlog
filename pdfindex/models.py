@@ -5,6 +5,7 @@ from django.urls import reverse
 class pdf(models.Model):
     title = models.CharField(max_length=32)
     embed_url = models.CharField(max_length=1000)
+    description = models.CharField(max_length=1000, default='Description for a PDF')
     class Meta:
         ordering = ['title']
 
